@@ -14,5 +14,10 @@
         <action name="login" class="com.gs.struts.UserAction" method="login">
             <result name="info">/WEB-INF/pages/user-info.jsp</result>
         </action>
+
+        <!-- {0}表示匹配整个uri. {1}匹配第一个通配符子串,{2}匹配第二个通配符子串,以此类推 -->
+        <action name="*" class="com.gs.struts.UserAction" method="{1}">
+            <result name="success">/WEB-INF/pages/user-success.jsp</result>
+        </action>
     </package>
 </struts>

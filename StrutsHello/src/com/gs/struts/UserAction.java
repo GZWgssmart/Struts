@@ -8,6 +8,8 @@ public class UserAction {
 
     private User user;
 
+    private String result;
+
     public User getUser() {
         return user;
     }
@@ -16,7 +18,31 @@ public class UserAction {
         this.user = user;
     }
 
+    public String getResult() {
+        return result;
+    }
+
     public String login() {
         return "info";
+    }
+
+    public String save() {
+        result = "save success";
+        return "success";
+    }
+
+    public String update() {
+        result = "update success";
+        return "success";
+    }
+
+    public String delete() {
+        result = "delete success";
+        return "success";
+    }
+
+    public String query() {
+        result = "query success";
+        return "success";
     }
 }

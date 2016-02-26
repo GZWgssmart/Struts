@@ -18,6 +18,14 @@
     <br />
     <a href="<%=path %>/user/tologin.action">User login</a>
     <br />
+    <a href="<%=path %>/user/save.action">Save user</a>
+    <br />
+    <a href="<%=path %>/user/update.action">Update user</a>
+    <br />
+    <a href="<%=path %>/user/delete.action">Delete user</a>
+    <br />
+    <a href="<%=path %>/user/query.action">Query user</a>
+    <br />
     <a href="<%=path %>/context/context.action?pname=pname">ActionContext</a>
     <br />
     <a href="<%=path %>/aware/aware.action?pname=pname">Aware</a>
