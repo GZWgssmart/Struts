@@ -16,6 +16,7 @@
         <!-- 未指定class,则使用默认的com.opensymphony.xwork2.ActionSupport, 方法为execute -->
         <action name="input">
             <!-- result type默认为转发dispatcher, result name默认为success -->
+            <!-- redirectAction重定向到一个action,chain转发到一个action,stream下载文件 -->
             <result>/WEB-INF/pages/input.jsp</result>
         </action>
 
