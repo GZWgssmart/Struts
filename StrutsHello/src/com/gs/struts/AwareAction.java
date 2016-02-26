@@ -1,7 +1,9 @@
 package com.gs.struts;
 
 import org.apache.struts2.interceptor.*;
+import org.apache.struts2.util.ServletContextAware;
 
+import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.Map;
@@ -9,7 +11,7 @@ import java.util.Map;
 /**
  * Created by WangGenshen on 2/26/16.
  */
-public class AwareAction implements ApplicationAware, RequestAware, SessionAware, ParameterAware, ServletRequestAware, ServletResponseAware {
+public class AwareAction implements ApplicationAware, RequestAware, SessionAware, ParameterAware, ServletRequestAware, ServletResponseAware, ServletContextAware {
 
     private Map<String, Object> application;
     private Map<String, Object> request;
@@ -18,6 +20,7 @@ public class AwareAction implements ApplicationAware, RequestAware, SessionAware
 
     private HttpServletRequest servletRequest;
     private HttpServletResponse servletResponse;
+    private ServletContext servletContext;
 
     @Override
     public void setApplication(Map<String, Object> map) {
@@ -49,11 +52,17 @@ public class AwareAction implements ApplicationAware, RequestAware, SessionAware
         this.servletResponse = response;
     }
 
+    @Override
+    public void setServletContext(ServletContext servletContext) {
+        this.servletContext = servletContext;
+    }
+
     public String execute() {
         application.put("applicationKey", "applicationValue");
         session.put("sessionKey", "sessionValue");
         request.put("requestKey", "requestValue");
         servletRequest.setAttribute("requestKey", "requestValue1");
+        servletContext.setAttribute("applicationKey", "applicationValue1");
         System.out.println(params.get("pname")[0]);
         return "success";
     }

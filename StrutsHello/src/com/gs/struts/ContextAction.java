@@ -2,8 +2,14 @@ package com.gs.struts;
 
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
+import org.apache.struts2.ServletActionContext;
 import org.apache.struts2.dispatcher.SessionMap;
 
+import javax.servlet.ServletContext;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.util.Map;
 
 /**
@@ -37,6 +43,11 @@ public class ContextAction extends ActionSupport {
         if (params.get("pname") != null) {
             System.out.println(((String[]) params.get("pname"))[0]);
         }
+
+        HttpServletRequest request = ServletActionContext.getRequest();
+        HttpSession session = request.getSession();
+        HttpServletResponse response = ServletActionContext.getResponse();
+        ServletContext servletContext = ServletActionContext.getServletContext(); // application对象
 
         return SUCCESS;
     }
