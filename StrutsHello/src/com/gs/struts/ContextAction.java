@@ -2,6 +2,7 @@ package com.gs.struts;
 
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
+import org.apache.struts2.dispatcher.SessionMap;
 
 import java.util.Map;
 
@@ -18,6 +19,15 @@ public class ContextAction extends ActionSupport {
 
         Map<String, Object> sessionMap = actionContext.getSession();
         sessionMap.put("sessionKey", "sessionValue");
+
+        /**
+         * 获取的sessionMap实际上是SessionMap对象,其有invalidate方法使session失效
+         */
+        if (sessionMap instanceof SessionMap) {
+            SessionMap<String, Object> session = (SessionMap<String, Object>) sessionMap;
+            session.invalidate();
+            System.out.println("session失效");
+        }
 
         Map<String, Object> requestMap = (Map<String, Object>) actionContext.get("request");
         requestMap.put("requestKey", "requestValue");
