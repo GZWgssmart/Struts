@@ -17,5 +17,7 @@
     <a href="<%=path %>/product/input.action">Product input</a>
     <br />
     <a href="<%=path %>/user/tologin.action">User login</a>
+    <br />
+    <a href="<%=path %>/context/context.action?pname=pname">ActionContext</a>
   </body>
 </html>
