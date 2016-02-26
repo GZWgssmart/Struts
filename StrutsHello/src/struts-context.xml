@@ -12,4 +12,10 @@
             <result>/WEB-INF/pages/action-context.jsp</result>
         </action>
     </package>
+
+    <package name="aware" extends="struts-default" namespace="/aware">
+        <action name="aware" class="com.gs.struts.AwareAction">
+            <result>/WEB-INF/pages/action-context.jsp</result>
+        </action>
+    </package>
 </struts>

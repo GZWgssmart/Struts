@@ -19,5 +19,7 @@
     <a href="<%=path %>/user/tologin.action">User login</a>
     <br />
     <a href="<%=path %>/context/context.action?pname=pname">ActionContext</a>
+    <br />
+    <a href="<%=path %>/aware/aware.action?pname=pname">Aware</a>
   </body>
 </html>
