@@ -29,5 +29,9 @@
     <a href="<%=path %>/context/context.action?pname=pname">ActionContext</a>
     <br />
     <a href="<%=path %>/aware/aware.action?pname=pname">Aware</a>
+    <br />
+    <a href="<%=path %>/dynamic/dynamic!save.action">Dynamic save</a>
+    <br />
+    <a href="<%=path %>/dynamic/dynamic!update.action">Dynamic update</a>
   </body>
 </html>
