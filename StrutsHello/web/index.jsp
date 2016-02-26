@@ -15,5 +15,7 @@
   </head>
   <body>
     <a href="<%=path %>/product/input.action">Product input</a>
+    <br />
+    <a href="<%=path %>/user/tologin.action">User login</a>
   </body>
 </html>

@@ -19,4 +19,7 @@
             <result name="details">/WEB-INF/pages/details.jsp</result>
         </action>
     </package>
+    
+    <include file="struts-user.xml" />
+
 </struts>
