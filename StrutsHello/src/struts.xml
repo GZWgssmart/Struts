@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+    <!-- 每个package相当于一个独立的模块,不同的模块使用不同的全名空间,默认为/ -->
+    <package name="hello" extends="struts-default" namespace="/product">
+        <!-- 未指定class,则使用默认的com.opensymphony.xwork2.ActionSupport, 方法为execute -->
+        <action name="input">
+            <!-- result type默认为转发dispatcher, result name默认为success -->
+            <result>/WEB-INF/pages/input.jsp</result>
+        </action>
+
+        <!-- method指定某个方法,如果不指定某个方法,则是默认的execute方法 -->
+        <action name="save" class="com.gs.struts.ProductAction">
+            <result name="details">/WEB-INF/pages/details.jsp</result>
+        </action>
+    </package>
+</struts>
