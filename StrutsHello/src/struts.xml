@@ -6,6 +6,11 @@
 
 <struts>
 
+    <!-- org.apache.struts2包中的default.properties配置文件中 -->
+    <constant name="struts.action.extension" value="action,do," />
+    <constant name="struts.devMode" value="true" />
+    <constant name="struts.multipart.maxSize" value="10485760" />
+
     <!-- 每个package相当于一个独立的模块,不同的模块使用不同的全名空间,默认为/ -->
     <package name="hello" extends="struts-default" namespace="/product">
         <!-- 未指定class,则使用默认的com.opensymphony.xwork2.ActionSupport, 方法为execute -->
