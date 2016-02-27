@@ -11,6 +11,7 @@
     <constant name="struts.devMode" value="true" />
     <constant name="struts.multipart.maxSize" value="10485760" />
     <constant name="struts.enable.DynamicMethodInvocation" value="true" /><!-- 支持动态方法调用,默认为false -->
+    <constant name="struts.ognl.allowStaticMethodAccess" value="true" /><!-- ognl允许访问静态方法 -->
 
     <!-- 每个package相当于一个独立的模块,不同的模块使用不同的全名空间,默认为/ -->
     <package name="hello" extends="struts-default" namespace="/product">

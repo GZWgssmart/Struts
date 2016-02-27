@@ -70,4 +70,8 @@ public class OGNLAction implements RequestAware, SessionAware, ApplicationAware 
     public void setSession(Map<String, Object> map) {
         this.session = map;
     }
+
+    public static String test(String param) {
+        return "static method: " + param;
+    }
 }

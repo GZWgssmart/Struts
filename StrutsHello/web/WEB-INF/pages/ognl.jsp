@@ -25,6 +25,9 @@ Result: <s:property value="result" />, <s:property value="[0].result" /><!-- [0]
 <!-- 按request, session, application的顺序从域中读取值,使用#object.property的方式,如果指定从session中读取则用#session.object.property的形式 -->
 Application:<s:property value="#application.applicationKey" /><br />
 Session:<s:property value="#session.sessionKey" /> <br/>
-Request:<s:property value="#request.requestKey" />
+Request:<s:property value="#request.requestKey" /><br />
+Static field: <s:property value="@java.lang.Math@PI" /><br /><!-- 调用静态字段 -->
+Static method: <s:property value="@java.lang.Math@cos(0)" /><br />
+OGNLAction Static Method: <s:property value="@com.gs.struts.OGNLAction@test('param')" /><br/><!-- 调用静态方法 -->
 </body>
 </html>
