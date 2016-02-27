@@ -33,5 +33,7 @@
     <a href="<%=path %>/dynamic/dynamic!save.action">Dynamic save</a>
     <br />
     <a href="<%=path %>/dynamic/dynamic!update.action">Dynamic update</a>
+    <br />
+    <a href="<%=path %>/ognl/ognl.action">OGNL</a>
   </body>
 </html>

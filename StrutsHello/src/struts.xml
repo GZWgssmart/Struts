@@ -36,5 +36,6 @@
     
     <include file="struts-user.xml" />
     <include file="struts-context.xml" />
+    <include file="struts-ognl.xml" />
 
 </struts>
