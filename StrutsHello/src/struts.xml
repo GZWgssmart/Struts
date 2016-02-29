@@ -34,6 +34,25 @@
             <result>/WEB-INF/pages/dynamic.jsp</result>
         </action>
     </package>
+
+    <!-- 配置一个基础的package,里面可以配置一些global-exception-mappings -->
+    <package name="basePackage" extends="struts-default">
+        <global-results>
+            <result name="error">/WEB-INF/pages/exception.jsp</result>
+        </global-results>
+        <global-exception-mappings>
+            <exception-mapping exception="java.lang.NullPointerException" result="error"></exception-mapping>
+        </global-exception-mappings>
+    </package>
+
+    <package name="exception" extends="basePackage" namespace="/exception">
+        <action name="exception" class="com.gs.struts.ExceptionAction">
+            <exception-mapping exception="java.lang.ArithmeticException" result="error"></exception-mapping>
+            <result name="error">/WEB-INF/pages/exception.jsp</result>
+        </action>
+        <action name="globalException" class="com.gs.struts.GlobalExceptionAction">
+        </action>
+    </package>
     
     <include file="struts-user.xml" />
     <include file="struts-context.xml" />

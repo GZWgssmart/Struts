@@ -35,5 +35,9 @@
     <a href="<%=path %>/dynamic/dynamic!update.action">Dynamic update</a>
     <br />
     <a href="<%=path %>/ognl/ognl.action">OGNL</a>
+    <br />
+    <a href="<%=path %>/exception/exception.action">Exception</a>
+    <br />
+    <a href="<%=path %>/exception/globalException.action">Global Exception</a>
   </body>
 </html>
