@@ -39,5 +39,7 @@
     <a href="<%=path %>/exception/exception.action">Exception</a>
     <br />
     <a href="<%=path %>/exception/globalException.action">Global Exception</a>
+    <br />
+    <a href="<%=path %>/tag/tag.action">Tag</a>
   </body>
 </html>

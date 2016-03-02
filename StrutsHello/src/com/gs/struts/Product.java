@@ -24,6 +24,15 @@ public class Product {
         this.name = name;
     }
 
+    public Product() {
+
+    }
+
+    public Product(int id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
     @Override
     public String toString() {
         return "Product{" +
