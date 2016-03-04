@@ -41,5 +41,7 @@
     <a href="<%=path %>/exception/globalException.action">Global Exception</a>
     <br />
     <a href="<%=path %>/tag/tag.action">Tag</a>
+    <br />
+    <a href="<%=path %>/form/toFormLogin.action">Form Tag login</a>
   </body>
 </html>
