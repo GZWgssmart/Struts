@@ -16,8 +16,8 @@
             </interceptor-stack>
         </interceptors>
         <default-interceptor-ref name="myStack"></default-interceptor-ref>
-        <action name="*" class="com.gs.struts.ModelDrivenAndPrepareAction">
-            <result>/WEB-INF/pages/user-{1}.jsp</result>
+        <action name="user-*" class="com.gs.struts.ModelDrivenAndPrepareAction" method="{1}">
+            <result name="{1}">/WEB-INF/pages/user-{1}.jsp</result>
         </action>
     </package>
 </struts>
