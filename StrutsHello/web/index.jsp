@@ -43,5 +43,9 @@
     <a href="<%=path %>/tag/tag.action">Tag</a>
     <br />
     <a href="<%=path %>/form/toFormLogin.action">Form Tag login</a>
+    <br />
+    <a href="<%=path %>/convertion/convertion.action">Convertion</a>
+    <br />
+    <a href="<%=path %>/convertion/toPage.action">Convertion</a>
   </body>
 </html>

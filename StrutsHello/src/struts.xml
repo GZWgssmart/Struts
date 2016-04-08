@@ -60,5 +60,6 @@
     <include file="struts-tag.xml" />
     <include file="struts-form.xml" />
     <include file="struts-model-prepare.xml" />
+    <include file="struts-convertion.xml" />
 
 </struts>
