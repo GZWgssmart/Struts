@@ -46,6 +46,8 @@
     <br />
     <a href="<%=path %>/convertion/convertion.action">Convertion</a>
     <br />
-    <a href="<%=path %>/convertion/toPage.action">Convertion</a>
+    <a href="<%=path %>/convertion/toPage.action">Convertion1</a>
+    <br />
+    <a href="<%=path %>/i18n/toI18NPage.action">i18n</a>
   </body>
 </html>
